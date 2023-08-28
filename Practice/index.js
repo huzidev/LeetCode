@@ -13,11 +13,8 @@
 let s = "anagram";
 let t = "nagaram";
 
-let val1 = s.toLowerCase().sort()
-let val2 = t.toLowerCase().sort()
-
-console.log(val1);
-console.log(val2);
+let val1 = s.toLowerCase().split('').sort().join('');
+let val2 = t.toLowerCase().split('').sort().join('');
 
 // after .split('') it'll became [ 'a', 'n', 'a', 'g', 'r', 'a', 'm' ]
 // after sort both s and t became same values [ 'a', 'a', 'a', 'g', 'm', 'n', 'r' ]
