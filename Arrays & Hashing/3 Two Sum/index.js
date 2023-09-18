@@ -17,12 +17,9 @@
 
 // nums.length - 1 so last index would not compare with each others
 for (let i = 0; i < nums.length - 1; i++) {
-    let a = i;
-    // j + 1 so it won't compare values of same index
     for (let j = i + 1; j < nums.length; j++) {
-        let b = j;
-        if (nums[a] + nums[b] === target) {
-            return [a, b];
+        if (nums[i] + nums[j] === target) {
+            return [i, j];
         }
     }
 }
