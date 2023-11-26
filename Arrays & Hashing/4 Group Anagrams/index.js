@@ -23,7 +23,7 @@ strs.forEach(value => {
     // cleaned to get sorted value Ex: eat => aet, tea => aet
     const cleaned = value.split('').sort().join('');
     // if in object result we've key present then pust that index value in array
-    // Ex: { aet: [ 'eat' ] } here we've aet key already present therefore pust the value of that index in array as tea sorted value is also aet hence it mathces the condition
+    // Ex: { aet: [ 'eat' ] } here we've aet key already present therefore pust the value of that index in array as tea sorted value is also aet hence it matches the condition
     if (result[cleaned]) {
         result[cleaned].push(value);
     }
