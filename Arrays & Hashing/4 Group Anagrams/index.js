@@ -4,7 +4,7 @@
 // Example 1:
 // Input: strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
 // Output: [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]
-
+ 
 // Example 2:
 // Input: strs = [""]
 // Output: [[""]]
@@ -20,7 +20,7 @@ let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 // EX: { aet: [ 'eat', 'tea', 'ate' ], ant: [ 'tan', 'nat' ], abt: [ 'bat' ] }
 let result = {};
 strs.forEach(value => {
-    // cleaned to get sorted value Ex: eat => aet, tea => aet
+    // cleaned to get sorted array EX: ["eat", "tea", "tan", "ate", "nat", "bat"] => ["aet", "aet", "ant", "aet", "ant", "abt"]
     const cleaned = value.split('').sort().join('');
     // if in object result we've key present then pust that index value in array
     // Ex: { aet: [ 'eat' ] } here we've aet key already present therefore push the value of that index in array as tea sorted value is also aet hence it matches the condition
