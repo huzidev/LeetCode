@@ -8,6 +8,8 @@
 // Input: nums = [1], k = 1
 // Output: [1]
 
-let nums = [1, 1, 1, 2, 2, 3] 
+let nums = [1, 1, 1, 2, 2, 3];
 let k = 2;
 
+let map = {};
+let result = [];
