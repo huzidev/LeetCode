@@ -13,7 +13,6 @@
 // Input: strs = ["a"]
 // Output: [["a"]]
 
-
 let strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 // empyt object so we can assigned key and value and value will be in array format
@@ -30,7 +29,7 @@ strs.forEach(value => {
     // will run initially as empty object OR when value doesn't exitst in ours object
     // Ex: {} => { aet: [ 'eat' ] } 
     else {
-        result[cleaned] = [value]
+        result[cleaned] = [value];
     }
 
     // OR
