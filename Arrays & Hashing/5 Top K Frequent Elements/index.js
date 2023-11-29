@@ -30,12 +30,14 @@ nums.forEach((value) => {
 // to get the frequency(length) of all the keys
 // b[1].length - a[1].length because we are getting frequency(length) on the basis of values and values Ex: [1, 1, 1] are at 1st index on 0th index their are keys
 // b[1].length - a[1].length to get maximum frequency(length) keys first
-// Before {
-//     '1' : [1, 1, 1],
-//     '2' : [2, 2],
-//     '3' : [3]
+// Ex: Before {
+//     '5' : [5, 5],
+//     '3' : [3, 3, 3, 3],
+//     '1' : [1, 1, 1]
 // }
 // After {
-    '1' : []
-}
+//     '3' : [3, 3, 3, 3],
+//     '1' : [1, 1, 1],
+//     '5' : [5, 5]
+// }
 let count = Object.entries(res).sort((a, b) => b[1].length - a[1].length);
