@@ -41,3 +41,9 @@ nums.forEach((value) => {
 //     '5' : [5, 5]
 // }
 let count = Object.entries(res).sort((a, b) => b[1].length - a[1].length);
+
+for (let i = 0; i < k; i++) {
+    // count[i][0] suppose the length of k is 2 and keys with most frequency(length) are 3 and 1 hence on first iteration push 3 in result index and [0] means push the keys
+    // because 3 and 1 will going to be push the result array and both are keys
+    result.push(parseInt(count[i][0]));
+}
