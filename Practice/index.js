@@ -5,6 +5,7 @@ let val;
 
 for (let i = 0; i < nums.length; i++) {
     nums.filter((value, index) => {
+        console.log("val", value);
         if (i !== index) {
             val = value * nums[index+1]
         }
