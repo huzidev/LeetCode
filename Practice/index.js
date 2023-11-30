@@ -4,14 +4,19 @@ let newArray = [];
 let val;
 
 for (let i = 0; i < nums.length; i++) {
-    newArray = nums.filter((v, index) => index !== i);
-    for (let j = 0; j < newArray.length - 1; j++) {
-        if (j !== 0) {
-            val = val * newArray[j + 1];
-        } else {
-            val = newArray[j] * newArray[j + 1];
-        } 
-    }
+    nums.filter((value, index) => {
+        if (i !== index) {
+            val = value * nums[index+1]
+        }
+    })
+    // newArray = nums.filter((v, index) => index !== i);
+    // for (let j = 0; j < newArray.length - 1; j++) {
+    //     if (j !== 0) {
+    //         val = val * newArray[j + 1];
+    //     } else {
+    //         val = newArray[j] * newArray[j + 1];
+    //     } 
+    // }
     result.push(val);
 }
 console.log("Result ", result);
