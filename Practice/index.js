@@ -1,10 +1,10 @@
-// let nums = [1, 2, 3, 4];
-let nums = [-1, 1, 0, -3, 3];
+let nums = [1, 2, 3, 4];
+// let nums = [-1, 1, 0, -3, 3];
 // let result = [];
 let newArray = [];
 
 
-console.log("Test", nums.map((val, index) => val))
+console.log("Test", nums.length)
 
 // let result = nums.map((v, i) => nums.filter((val, index) => i !== index).reduce((a, b) => a * b), 1); 
 
@@ -18,4 +18,3 @@ console.log("Test", nums.map((val, index) => val))
 //     // // }
 //     // result.push(val);
 // }
-console.log("Result ", result);
