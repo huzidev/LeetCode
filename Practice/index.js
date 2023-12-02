@@ -19,10 +19,15 @@ let nums = [1, 2, 3, 4];
 let res = [];
 let start = 1;
 
-for (let i = 0; i < nums.length; i++) {
+nums.forEach((v) => {
     res.push(start);
-    start = start * nums[i];    
-}
+    start = start * v
+})
+
+// for (let i = 0; i < nums.length; i++) {
+//     res.push(start);
+//     start = start * nums[i];    
+// }
 
 start = 1;  
 
