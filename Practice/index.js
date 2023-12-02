@@ -21,8 +21,14 @@ let start = 1;
 
 for (let i = 0; i < nums.length; i++) {
     res.push(start);
-    console.log(`res on ${i}st iteration`, res);
     start = start * nums[i];    
 }
 
-console.log("Outside res", res);
+start = 1;
+
+for (let i = nums.length - 1; i >= 0; i--) {
+    res[i] = start * res[i];
+    start = start * nums[i];
+}
+
+console.log("res", res);
