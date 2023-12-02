@@ -45,7 +45,7 @@ for (let i = nums.length - 1; i >= 0; i--) {
     // update value's value 1 x 4 is 4 because initially i is 3 hence on 3rd index of nums array is value 4 [1, 2, 3, 4]
     // now 4 x 3 is 12 now value will be 12
     // now 12 x 2 is 24
-    console.log("value before", value);
     value = value * nums[i];
-    console.log("value after", value);
 }
+
+return result;
