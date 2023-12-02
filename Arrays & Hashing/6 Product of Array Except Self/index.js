@@ -14,3 +14,4 @@
 
 // We can't use nested loop becuse O(n) is required hence if we use nested loop then it'll be O(n2)
 
+let nums = [1, 2, 3, 4];
