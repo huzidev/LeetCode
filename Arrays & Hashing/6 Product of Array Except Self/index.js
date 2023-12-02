@@ -27,8 +27,8 @@ for (let i = 0; i < nums.length; i++) {
     // on first itertaion value 1 will be push into to result array result = [1]
     result.push(value);
     // update value's value
-    // now 1 x 1 is 1 hence now the value is 1 and on 2nd iteration 1 will push into the result array again
-    // result = [1, 1]
-    // now on third
+    // now 1 x 1 is 1, now the value is 1 and on 2nd iteration 1 will push into the result array again and update value's value 1 x 2 is 2 now value is 2
+    // now on third iteration first 2 will be push into array then update value's value 2 x 3 is 6 hence on last itertaion 6 will be pushed into the result array
     value = value * nums[i];
+    // result array at the end will be [1, 1, 2, 6];
 }
