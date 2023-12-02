@@ -1,39 +1,19 @@
-let nums = [1, 2, 3, 4];
-// let nums = [-1, 1, 0, -3, 3];
-// let result = [];
-// let newArray = [];
+let board = [
+  ["5", "3", ".", ".", "7", ".", ".", ".", "."],
+  ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+  [".", "9", "8", ".", ".", ".", ".", "6", "."],
+  ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+  ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+  ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+  [".", "6", ".", ".", ".", ".", "2", "8", "."],
+  [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+  [".", ".", ".", ".", "8", ".", ".", "7", "9"],
+];
 
-// let result = nums.map((v, i) => nums.filter((val, index) => i !== index).reduce((a, b) => a * b), 1); 
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
-// for (let i = 0; i < nums.length; i++) {
-//     console.log("Res", nums.map((start, index) => index))
-//     // newArray = nums.filter((v, index) => index !== i);
-//     // let val = 1;
-//     // val = newArray.reduce((a, b) => a * b, 1);
-//     // // for (let j = 0; j < newArray.length; j++) {
-//     // //     val = val * newArray[j];
-//     // // }
-//     // result.push(val);
-// }
-
-let res = [];
-let start = 1;
-
-nums.forEach((v) => {
-    res.push(start);
-    start = start * v
-})
-
-// for (let i = 0; i < nums.length; i++) {
-//     res.push(start);
-//     start = start * nums[i];    
-// }
-
-start = 1;  
-
-for (let i = nums.length - 1; i >= 0; i--) {
-    res[i] = start * res[i];
-    start = start * nums[i];
+for (let i = 0; i < board.length; i++) {
+    for (let j = 0; j < board.length; j++) {
+        board[i] === board[j] ? console.log("Flase") : console.log("true");;
+    }
 }
-
-console.log("res", res);
