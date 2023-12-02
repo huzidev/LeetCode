@@ -23,6 +23,12 @@ if (nums.length === 2) return nums.reverse();
 let result = [];
 let value = 1;
 
+// forEach is best method takes lesser memory
+nums.forEach((v) => {
+    res.push(value);
+    value = value * v;
+})
+
 for (let i = 0; i < nums.length; i++) {
     // on first itertaion value 1 will be push into to result array result = [1]
     result.push(value);
