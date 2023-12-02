@@ -1,18 +1,15 @@
 let nums = [1, 2, 3, 4];
 let result = [];
 let newArray = [];
-let val = 1;
 
-for (let i = 0; i < nums.length; i++) {
-    newArray = nums.filter((v, index) => index !== i);
-    for (let j = 0; j < newArray.length; j++) {
-        // if (j !== 0) {
-        //     val = val * newArray[j + 1];
-        // } else {
-        //     val = newArray[j] * newArray[j + 1];
-        // } 
-        val = val * newArray[j];
-    }
-    result.push(val);
-}
-console.log("Result ", result);
+console.log("");
+
+// for (let i = 0; i < nums.length; i++) {
+//     newArray = nums.filter((v, index) => index !== i);
+//     let val = 1;
+//     for (let j = 0; j < newArray.length; j++) {
+//         val = val * newArray[j];
+//     }
+//     result.push(val);
+// }
+// console.log("Result ", result);
