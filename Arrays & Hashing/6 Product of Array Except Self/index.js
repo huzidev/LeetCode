@@ -5,7 +5,7 @@
 // You must write an algorithm that runs in O(n) time and without using the division operation.
 
 // Example 1:
-// Input: nums = [1, 2, 3, 4]
+// Input: nums = [6, 5, 4, 2]
 // Output: [24, 12, 8, 6]
 
 // Example 2:
@@ -31,4 +31,16 @@ for (let i = 0; i < nums.length; i++) {
     // now on third iteration first 2 will be push into array then update value's value 2 x 3 is 6 hence on last itertaion 6 will be pushed into the result array
     value = value * nums[i];
     // result array at the end will be [1, 1, 2, 6];
+}
+
+// now updating the value's value to 1 again
+value = 1;
+
+// using nums.length - 1 because result array's last value will always be accurate therefore we've put value = 1 and nums.length - 1 is 3 hence on 3rd index OR last value
+// of result array will be accurate
+for (let i = nums.length - 1; i >= 0; i--) {
+    // res[i] means 3rd index values [1, 1, 2, 6] is 6 and value is 1 hence 1 * 6 will be 6 hence res[i] = value * res[i]
+    res[i] = value * res[i];   
+    // update value's value
+    value = value * nums[i];
 }
