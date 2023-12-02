@@ -15,3 +15,7 @@
 // We can't use nested loop becuse O(n) is required hence if we use nested loop then it'll be O(n2)
 
 let nums = [1, 2, 3, 4];
+
+// if nums length is 2 then return nums.reverse because the problem is to get product of array except self
+// Ex: [2, 1] on first iteration we don't need 2 hence in result array push [1] and 2nd iteration we don't need 1 hence push 2 [1, 2]
+if (nums.length === 2) return nums.reverse();
