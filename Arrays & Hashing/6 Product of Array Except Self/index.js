@@ -39,8 +39,9 @@ value = 1;
 // using nums.length - 1 because result array's last value will always be accurate therefore we've put value = 1 and nums.length - 1 is 3 hence on 3rd index OR last value
 // of result array will be accurate
 for (let i = nums.length - 1; i >= 0; i--) {
-    // res[i] means 3rd index values [1, 1, 2, 6] is 6 and value is 1 hence 1 * 6 will be 6 hence res[i] = value * res[i]
-    res[i] = value * res[i];   
+    // res[i] means 3rd index values [1, 1, 2, 6] is 6 and value is 1 hence 1 * 6 will be 6 hence result[i] = value * res[i]
+    // on 2nd iteration due to i-- i will be 2 hence result[i]
+    result[i] = value * result[i];   
     // update value's value
     value = value * nums[i];
 }
