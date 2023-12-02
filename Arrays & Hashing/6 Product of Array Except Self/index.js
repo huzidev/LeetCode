@@ -19,3 +19,16 @@ let nums = [1, 2, 3, 4];
 // if nums length is 2 then return nums.reverse because the problem is to get product of array except self
 // Ex: [2, 1] on first iteration we don't need 2 hence in result array push [1] and 2nd iteration we don't need 1 hence push 2 [1, 2]
 if (nums.length === 2) return nums.reverse();
+
+let result = [];
+let value = 1;
+
+for (let i = 0; i < nums.length; i++) {
+    // on first itertaion value 1 will be push into to result array result = [1]
+    result.push(value);
+    // update value's value
+    // now 1 x 1 is 1 hence now the value is 1 and on 2nd iteration 1 will push into the result array again
+    // result = [1, 1]
+    // now on third
+    value = value * nums[i];
+}
