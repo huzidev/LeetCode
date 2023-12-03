@@ -16,7 +16,12 @@ let arr = [
     [7, 8, 9]]
 ;
 
-for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-    }
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//         console.log("Col", arr.map(v => v[j]));
+//     }
+// }
+for (let j = 0; j < arr[0].length; j++) { // Loop through columns
+    let column = arr.map(row => row[j]); // Extract the column
+    console.log("Column", j + 1 + ":", column); // Print the column
 }
