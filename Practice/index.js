@@ -25,7 +25,5 @@ let result = [];
 for (let j = 0; j < arr[0].length; j++) {
     let column = arr.map(col => col[j]);
     let row = arr[j];
-    // console.log("Column", j + 1 + ':', column);
-    // console.log("Row", j + 1 + ':', arr[j]);
-    console.log("result", result);
+    console.log("Result", column.length !== new Set(column).size ? false : true);
 }
