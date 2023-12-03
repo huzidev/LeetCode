@@ -23,6 +23,7 @@ let arr = [
 // }
 let row = [];
 let column = [];
+let box = [];
 for (let j = 0; j < board[0].length; j++) {
     board.map(col => col[j] === '.' ? '' : column.push(col[j]));
     board[j] === '.' ? '' : row.push(board[j]);
