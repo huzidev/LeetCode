@@ -21,7 +21,10 @@ let arr = [
 //         console.log("Col", arr.map(v => v[j]));
 //     }
 // }
-for (let j = 0; j < arr[0].length; j++) { // Loop through columns
-    let column = arr.map(row => row[j]); // Extract the column
-    console.log("Column", j + 1 + ":", column); // Print the column
+let result = [];
+for (let j = 0; j < arr[0].length; j++) {
+    let column = arr.map(col => col[j]);
+    console.log("Column", j + 1 + ':', column);
+    console.log("Row", j + 1 + ':');
+    
 }
