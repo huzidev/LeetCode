@@ -16,23 +16,24 @@ let arr = [
     [7, 8, 9]]
 ;
 
+
 // for (let i = 0; i < arr.length; i++) {
-//     for (let j = 0; j < arr.length; j++) {
-//         console.log("Col", arr.map(v => v[j]));
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log("Col", arr.map(v => v[i]));
 //     }
 // }
 let row = [];
 let column = [];
 let box = [];
-for (let j = 0; j < board[0].length; j++) {
-    board.map(col => col[j] === '.' ? '' : column.push(col[j]));
-    board[j] === '.' ? '' : row.push(board[j]);
+for (let i = 0; i < board.length; i++) {
+    board.map(col => col[i] === '.' ? '' : column.push(col[i]));
+    board[i] === '.' ? '' : row.push(board[i]);
     // console.log("Result col", column.length !== new Set(column).size ? false : true);
     // console.log("Result row", column.length !== new Set(row).size ? false : true);
     column = [];
     row = [];
     // for 3x3 box
-    for (let i = 0; i < 3; i++) {
-        
+    for (let j = 0; j < 3; i++) {
+        console.log("Box", board[j]);
     }
 }
