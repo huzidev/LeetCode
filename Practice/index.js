@@ -33,7 +33,7 @@ for (let i = 0; i < board.length; i++) {
     column = [];
     row = [];
     // for 3x3 box
-    for (let j = 0; j < 3; i++) {
-        console.log("Box", board[j]);
+    for (let j = 0; j < 3; j++) {
+        console.log("Box", board.map(val => val[j]));
     }
 }
