@@ -21,11 +21,13 @@ let arr = [
 //         console.log("Col", arr.map(v => v[j]));
 //     }
 // }
-let result = [];
-for (let j = 0; j < arr[0].length; j++) {
-    let column = arr.map(col => col[j]);
-    console.log("column", column);
-    let row = arr[j];
+let row = [];
+let column = [];
+for (let j = 0; j < board[0].length; j++) {
+    board.map(col => col[j] === '.' ? '' : column.push(col[j]));
+    board[j] === '.' ? '' : row.push(board[j]);
     // console.log("Result col", column.length !== new Set(column).size ? false : true);
     // console.log("Result row", column.length !== new Set(row).size ? false : true);
+    column = [];
+    row = [];
 }
