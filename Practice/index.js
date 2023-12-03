@@ -31,4 +31,8 @@ for (let j = 0; j < board[0].length; j++) {
     // console.log("Result row", column.length !== new Set(row).size ? false : true);
     column = [];
     row = [];
+    // for 3x3 box
+    for (let i = 0; i < 3; i++) {
+        
+    }
 }
