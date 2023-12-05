@@ -18,13 +18,15 @@ for (let i = 0; i < board.length; i++) {
     board.map(col => col[i] === '.' ? '' : column.push(col[i]));
     board[i] === '.' ? '' : row.push(board[i]);
     // console.log("Result col", column.length !== new Set(column).size ? false : true);
-    // console.log("Result row", column.length !== new Set(row).size ? false : true);
+    // console.log("Result row", row.length !== new Set(row).size ? false : true);
     column = [];
     row = [];
 
     for (let j = 0; j < 3; j++) {
         for (let k = 0; k < 3; k++) {
-            console.log('3x3 result', board[j][k] === '.' ? '' : box.push(board[j][k]));
+            board[j][k] === '.' ? '' : box.push(board[j][k]);
+            console.log("3x3 Result", );
+
         }
     }
 }
