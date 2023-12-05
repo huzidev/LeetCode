@@ -22,16 +22,14 @@ for (let i = 0; i < board.length; i++) {
     column = [];
     row = [];
 
-    for (let j = 0; j < 3; j++) {
-        for (let k = 0; k < 3; k++) {
-            board[j][k] === '.' ? '' : box.push(board[j][k]);
-            console.log("3x3 Result", );
-
+    for (let j = i === 0 ? 0 : + 3; j < 3; j++) {
+        for (let k = i === 0 ? 0 : + 3; k < 3; k++) {
+            // board[j][k] === '.' ? '' : box.push(board[j][k]);
+            // console.log("3x3 Result", box.length !== new Set(box) ? false : true);
+            console.log("result", board[j][k]);
         }
     }
 }
-
-console.log("box", board.length / 3);
 
 
 
