@@ -43,14 +43,15 @@ nums.sort((a, b) => a - b);
 let newArr = new Set(nums);
 let newRes = [...newArr]
 let result = [];
+console.log('New array', newRes);
 let hold = newRes[0];
 console.log("Hold", hold);
 newRes.forEach((val, i) => {
     if (hold === val) {
         result.push(val);
         hold = i + 1;
+        console.log("hold after", hold);
     }
 })
-console.log('result', result);
 
 console.log("result", result.length);
