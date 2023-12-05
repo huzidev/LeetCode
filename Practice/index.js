@@ -24,16 +24,27 @@ for (let i = 0; i < board.length; i++) {
     column = [];
     row = [];
 
-    let hold = i === 0 ? 0 : + 3;
-    for (let j = hold; j < 3 + hold; j++) {
-        for (let k = hold; k < 3 + hold; k++) {
-            // board[j][k] === '.' ? '' : box.push(board[j][k]);
-            // console.log("3x3 Result", box.length !== new Set(box) ? false : true);
-            box.push(board[j][k])
+    // let hold = i === 0 ? 0 : + 3;
+    // for (let j = hold; j < 6; j++) {
+        //     for (let k = hold; k < 6; k++) {
+            //         // board[j][k] === '.' ? '' : box.push(board[j][k]);
+            //         // console.log("3x3 Result", box.length !== new Set(box) ? false : true);
+            //         box.push(board[j][k])
+            //     }
+            // }
+            // console.log('box', box);
         }
+        
+        
+let hold = 0;
+for (let j = hold; j < 3; j++) {
+    for (let k = hold; k < 3; k++) {
+        // board[j][k] === '.' ? '' : box.push(board[j][k]);
+        // console.log("3x3 Result", box.length !== new Set(box) ? false : true);
+        box.push(board[j][k])
     }
 }
-console.log("result", box);
+console.log('box', box);
 
 
 
