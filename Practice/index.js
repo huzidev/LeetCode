@@ -11,8 +11,8 @@
 // ];
 
 // let arr = [
-//     [1, 2, 3], 
-//     [4, 5, 6], 
+//     [1, 2, 3],
+//     [4, 5, 6],
 //     [7, 8, 9]]
 // ;
 
@@ -36,19 +36,21 @@
 
 // console.log("box", board.length % 3);
 
-let nums = [100, 4, 200, 1, 3, 2];
+let nums = [1, 4, 200, 1, 3, 2];
+// let nums = [0,3,7,2,5,8,4,6,0,1]; 
+// let nums = [0,8,9,100,6,4,3,2,99,1]; 
 nums.sort((a, b) => a - b);
 let newArr = new Set(nums);
 let newRes = [...newArr]
-console.log("new array", newRes);
+console.log("new array", newRes[0]);
 let result = [];
 let hold = newRes[0];
 newRes.forEach((val, i) => {
-    // console.log("hold", hold);
     if (hold === val) {
         result.push(val);
         hold = i + 1;
     }
 })
+console.log('result', result);
 
 console.log("result", result.length);
