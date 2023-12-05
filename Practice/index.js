@@ -42,9 +42,9 @@ let nums = [1, 4, 200, 1, 3, 2];
 nums.sort((a, b) => a - b);
 let newArr = new Set(nums);
 let newRes = [...newArr]
-console.log("new array", newRes);
 let result = [];
 let hold = newRes[0];
+console.log("Hold", hold);
 newRes.forEach((val, i) => {
     if (hold === val) {
         result.push(val);
