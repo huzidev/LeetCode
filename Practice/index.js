@@ -48,7 +48,7 @@ newRes.forEach((val) => {
     if (hold === val) {
         result.push(val);
         hold ++;
-    }
+    }   
 })
 
 console.log("result", result.length);
