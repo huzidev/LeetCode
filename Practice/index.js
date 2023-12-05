@@ -36,21 +36,21 @@
 
 // console.log("box", board.length % 3);
 
-let test = 1;
-if (test === 1) {
-    console.log("test before", test);
-    test ++;
-    console.log("test before", test);
-}
+// let test = -1;
+// if (test === -1) {
+//     console.log("test before", test);
+//     test ++;
+//     console.log("test before", test);
+// }
 
 let nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6];
 nums.sort((a, b) => a - b);
 let newArr = new Set(nums);
 let newRes = [...newArr]
 let result = [];
-// console.log('New array', newRes);
+console.log('New array', newRes);
 let hold = newRes[0];
-// console.log("Hold", hold);
+console.log("Hold", hold);
 newRes.forEach((val) => {
     if (hold === val) {
         result.push(val);
