@@ -44,12 +44,19 @@ let result = [];
 console.log('New array', newRes);
 let hold = newRes[0];
 console.log("Hold", hold);
-newRes.forEach((val) => {
-    if (hold === val) {
-        result.push(val);
-        hold ++;
-        console.log("HOld after", hold);
-    }   
-})
+let longestSequence = 0;
+let currentSequence = 1;
+console.log("hold", hold);
+    while (newArr.has(hold + 1)) {
+        hold++;
+        currentSequence++;
+    }
+    longestSequence = Math.max(longestSequence, currentSequence);
 
-console.log("result", result.length);
+    // if (hold === val) {
+    //     result.push(val);
+    //     hold ++;
+    //     console.log("HOld after", hold);
+    // }
+
+console.log("result", longestSequence);
