@@ -46,11 +46,10 @@ let result = [];
 console.log('New array', newRes);
 let hold = newRes[0];
 console.log("Hold", hold);
-newRes.forEach((val, i) => {
+newRes.forEach((val) => {
     if (hold === val) {
         result.push(val);
-        hold = i + 1;
-        console.log("hold after", hold);
+        hold ++;
     }
 })
 
