@@ -21,9 +21,15 @@ for (let i = 0; i < board.length; i++) {
     // console.log("Result row", column.length !== new Set(row).size ? false : true);
     column = [];
     row = [];
+
+    for (let j = 0; j < 3; j++) {
+        for (let k = 0; k < 3; k++) {
+            console.log('3x3 result', board[j][k] === '.' ? '' : box.push(board[j][k]));
+        }
+    }
 }
 
-// console.log("box", board.length % 3);
+console.log("box", board.length / 3);
 
 
 
