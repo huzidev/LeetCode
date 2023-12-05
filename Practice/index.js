@@ -36,9 +36,7 @@
 
 // console.log("box", board.length % 3);
 
-let nums = [1, 4, 200, 1, 3, 2];
-// let nums = [0,3,7,2,5,8,4,6,0,1]; 
-// let nums = [0,8,9,100,6,4,3,2,99,1]; 
+let nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6];
 nums.sort((a, b) => a - b);
 let newArr = new Set(nums);
 let newRes = [...newArr]
