@@ -18,35 +18,42 @@ let board = [
 let row = [];
 let column = [];
 let box = [];
-for (let i = 0; i < board.length; i++) {
-    board.map(col => col[i] === '.' ? '' : column.push(col[i]));
-    board[i] === '.' ? '' : row.push(board[i]);
-    // console.log("Result col", column.length !== new Set(column).size ? false : true);
-    // console.log("Result row", row.length !== new Set(row).size ? false : true);
-    column = [];
-    row = [];
 
-    // let hold = i === 0 ? 0 : + 3;
-    // for (let j = hold; j < 6; j++) {
-        //     for (let k = hold; k < 6; k++) {
-            //         // board[j][k] === '.' ? '' : box.push(board[j][k]);
-            //         // console.log("3x3 Result", box.length !== new Set(box) ? false : true);
-            //         box.push(board[j][k])
-            //     }
-            // }
-            // console.log('box', box);
-        }
-        
-        
-let hold = 0;
-for (let j = hold; j < 3; j++) {
-    for (let k = hold; k < 3; k++) {
-        // board[j][k] === '.' ? '' : box.push(board[j][k]);
-        // console.log("3x3 Result", box.length !== new Set(box) ? false : true);
-        box.push(board[j][k])
+for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+
     }
 }
-console.log('box', box);
+
+
+// for (let i = 0; i < board.length; i++) {
+//     board.map(col => col[i] === '.' ? '' : column.push(col[i]));
+//     board[i] === '.' ? '' : row.push(board[i]);
+//     // console.log("Result col", column.length !== new Set(column).size ? false : true);
+//     // console.log("Result row", row.length !== new Set(row).size ? false : true);
+//     column = [];
+//     row = [];
+
+//     // let hold = i === 0 ? 0 : + 3;
+//     // for (let j = hold; j < 6; j++) {
+//         //     for (let k = hold; k < 6; k++) {
+//             //         // board[j][k] === '.' ? '' : box.push(board[j][k]);
+//             //         // console.log("3x3 Result", box.length !== new Set(box) ? false : true);
+//             //         box.push(board[j][k])
+//             //     }
+//             // }
+//             // console.log('box', box);
+//         }
+
+// let hold = 0;
+// for (let j = hold; j < 3; j++) {
+//     for (let k = hold; k < 3; k++) {
+//         // board[j][k] === '.' ? '' : box.push(board[j][k]);
+//         // console.log("3x3 Result", box.length !== new Set(box) ? false : true);
+//         box.push(board[j][k])
+//     }
+// }
+// console.log('box', box);
 
 
 
