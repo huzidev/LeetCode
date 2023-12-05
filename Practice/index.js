@@ -19,11 +19,18 @@ let row = [];
 let column = [];
 let box = [];
 
+// i for row
+// j for column
 for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-
+        // for Rows
+        row.push(board[i][j]) 
+        // for Columns
+        column.push(board[j][i])
     }
 }
+console.log("ressult row", row);
+console.log("ressult columns", column);
 
 
 // for (let i = 0; i < board.length; i++) {
