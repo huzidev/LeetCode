@@ -36,27 +36,36 @@
 
 // console.log("box", board.length % 3);
 
-let nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6];
-nums.sort((a, b) => a - b);
-let newArr = new Set(nums);
-let newRes = [...newArr]
-let result = [];
-console.log('New array', newRes);
-let hold = newRes[0];
-console.log("Hold", hold);
-let longestSequence = 0;
-let currentSequence = 1;
-console.log("hold", hold);
-    while (newArr.has(hold + 1)) {
-        hold++;
-        currentSequence++;
-    }
-    longestSequence = Math.max(longestSequence, currentSequence);
 
-    // if (hold === val) {
-    //     result.push(val);
-    //     hold ++;
-    //     console.log("HOld after", hold);
-    // }
 
-console.log("result", longestSequence);
+
+
+
+
+
+
+
+
+// let nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6];
+// nums.sort((a, b) => a - b);
+// let newArr = new Set(nums);
+// let newRes = [...newArr]
+// let result = [];
+// console.log('New array', newRes);
+// let hold = newRes[0];
+// let longestSequence = 0;
+// let currentSequence = 1;
+// console.log("hold", hold);
+//     while (newArr.has(hold + 1)) {
+//         hold++;
+//         currentSequence++;
+//     }
+//     longestSequence = Math.max(longestSequence, currentSequence);
+
+//     // if (hold === val) {
+//     //     result.push(val);
+//     //     hold ++;
+//     //     console.log("HOld after", hold);
+//     // }
+
+// console.log("result", longestSequence);
