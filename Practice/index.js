@@ -27,7 +27,9 @@ for (let i = 0; i < 9; i++) {
         board[i][j] === '.' ? '' : row.push(board[i][j]) 
         // for Columns
         board[j][i] === '.' ? '' : column.push(board[j][i])
-
+        const boxNum = 3 * Math.floor(i/3) + Math.floor(j/3);
+        board[boxNum] === '.' ? '' : box.push(board[boxNum]);
+        console.log("Box result", box);
         if (column.length !== new Set(column).size || row.length !== new Set(row).size) {
             column = [];
             row = [];
