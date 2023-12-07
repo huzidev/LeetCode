@@ -81,30 +81,30 @@
 
 
 
-let nums = [9, 1, -3, 2, 4, 8, 3, -1, 6, -2, -4, 7];
-// let nums = [100, 4, 200, 1, 3, 2];
-if (!nums.length) return 0;
-nums.sort((a, b) => a - b);
-let set = new Set(nums);
-console.log("set", set);
+// let nums = [9, 1, -3, 2, 4, 8, 3, -1, 6, -2, -4, 7];
+// // let nums = [100, 4, 200, 1, 3, 2];
+// if (!nums.length) return 0;
+// nums.sort((a, b) => a - b);
+// let set = new Set(nums);
+// console.log("set", set);
 
-let maxSequence = 0;
-let currentSequence = 1;
+// let maxSequence = 0;
+// let currentSequence = 1;
 
-for (const i of set) {
-    let hold = i;
+// for (const i of set) {
+//     let hold = i;
 
-    if (set.has(hold + 1)) {
-        currentSequence++;
-    } else {
-        if (maxSequence < currentSequence) {
-            maxSequence = currentSequence;
-            console.log("max seq", maxSequence);
-        }
-        currentSequence = 1;
-    }
-}
-console.log("result", Math.max(currentSequence, maxSequence));
+//     if (set.has(hold + 1)) {
+//         currentSequence++;
+//     } else {
+//         if (maxSequence < currentSequence) {
+//             maxSequence = currentSequence;
+//             console.log("max seq", maxSequence);
+//         }
+//         currentSequence = 1;
+//     }
+// }
+// console.log("result", Math.max(currentSequence, maxSequence));
 
 
 // if (!nums.length) return 0;
