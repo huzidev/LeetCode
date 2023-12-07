@@ -24,8 +24,7 @@ let box = [];
 for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
         let value = board[i][j];
-        console.log("value", value);
-        // validBox(board, i, j, value)
+        validBox(board, i, j, value)
         // for Rows
         value === '.' ? '' : row.push(board[i][j]) 
         // for Columns
@@ -41,6 +40,11 @@ for (let i = 0; i < 9; i++) {
             return false;
         }
     }
+}
+
+function validBox(board, row, column, value) {
+    const startRow = row - (row % 3);
+    const startCol = column - (column % 3);
 }
 
 
