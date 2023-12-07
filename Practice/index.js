@@ -81,8 +81,8 @@
 
 
 
-// let nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6];
-let nums = [100, 4, 200, 1, 3, 2];
+let nums = [9, 1, -3, 2, 4, 8, 3, -1, 6, -2, -4, 7];
+// let nums = [100, 4, 200, 1, 3, 2];
 if (!nums.length) return 0;
 nums.sort((a, b) => a - b);
 let set = new Set(nums);
@@ -90,15 +90,29 @@ console.log("set", set);
 
 let maxSequence = 0;
 let currentSequence = 1;
-let max = 0;
 
 for (const i of set) {
     let hold = i;
-}
 
-// newArr.forEach((val, i) => {
-//     // let hold = i === newArr.length ? '' : newArr[i + 1];
-//     let hold = newArr[i + 1];
+    if (set.has(hold + 1)) {
+        currentSequence++;
+    } else {
+        if (maxSequence < currentSequence) {
+            maxSequence = currentSequence;
+            currentSequence = 1;
+        }
+    }
+}
+console.log("result", Math.max(currentSequence, maxSequence));
+
+
+// if (!nums.length) return 0;
+// nums.sort((a, b) => a - b);
+// let set = new Set(nums);
+// let maxSequence = 0;
+// let currentSequence = 1;
+// set.forEach((val, i) => {
+//     let hold = i !== set.size ? i + 1 : '';
 //     if (hold === val + 1) {
 //         currentSequence++;
 //     } else {
@@ -108,24 +122,4 @@ for (const i of set) {
 //         currentSequence = 1;
 //     }
 // })
-// console.log("Result", Math.max(currentSequence, maxSequence));
-
-// let result = [];
-// console.log('New array', newRes);
-// let hold = newRes[0];
-// let longestSequence = 0;
-// let currentSequence = 1;
-// console.log("hold", hold);
-//     while (newArr.has(hold + 1)) {
-//         hold++;
-//         currentSequence++;
-//     }
-//     longestSequence = Math.max(longestSequence, currentSequence);
-
-//     // if (hold === val) {
-//     //     result.push(val);
-//     //     hold ++;
-//     //     console.log("HOld after", hold);
-//     // }
-
-// console.log("result", longestSequence);
+// return Math.max(currentSequence, maxSequence);
