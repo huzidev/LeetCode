@@ -45,6 +45,11 @@ for (let i = 0; i < 9; i++) {
 function validBox(board, row, column, value) {
     const startRow = row - (row % 3);
     const startCol = column - (column % 3);
+    for (let i = startRow; i < startRow; i++) {
+        for (let j = startCol; j < startRow; j++) {
+            
+        }
+    }
 }
 
 
