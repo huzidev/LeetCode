@@ -15,29 +15,37 @@ let board = [
 ];
 
 
-let row = [];
-let column = [];
-let box = [];
+// const set = new Set();
 
 // i for row
 // j for column
+// for (let i = 0; i < 9; i++) {
+//     for (let j = 0; j < 9; j++) {
+//         // for Rows
+//         const row = board[i][j];
+//         row === '.' ? '' : rows.push(row) 
+//         // for Columns
+//         const col = board[j][i]; 
+//         col === '.' ? '' : columns.push(col)
+//         const boxNum = 3 * Math.floor(i/3) + Math.floor(j/3);
+//         console.log('box num', boxNum);
+        
+//         if (columns.length !== new Set(columns).size || rows.length !== new Set(rows).size) {
+//             columns = [];
+//             rows = [];
+//             return false;
+//         } else {
+//             columns = [];
+//             rows = [];
+//             return false;
+//         }
+//     }
+// }
+
+const set = new Set();
 for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-        // for Rows
-        board[i][j] === '.' ? '' : row.push(board[i][j]) 
-        // for Columns
-        board[j][i] === '.' ? '' : column.push(board[j][i])
-        const boxNum = 3 * Math.floor(i/3) + Math.floor(j/3);
-        board[boxNum] === '.' ? '' : box.push(board[boxNum]);
-        console.log("Box result", box);
-        if (column.length !== new Set(column).size || row.length !== new Set(row).size) {
-            column = [];
-            row = [];
-            return false;
-        } else {
-            column = [];
-            row = [];
-            return false;
-        }
+        const row = board[i][j];
+        const col = board[j][i];        
     }
 }
