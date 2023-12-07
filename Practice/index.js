@@ -81,7 +81,8 @@
 
 
 
-let nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6];
+// let nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6];
+let nums = [100, 4, 200, 1, 3, 2];
 if (!nums.length) return 0;
 nums.sort((a, b) => a - b);
 let newArr = [...new Set(nums)];
@@ -89,19 +90,17 @@ console.log("new arr", newArr);
 
 let maxSequence = 0;
 let currentSequence = 1;
-let hold = newArr[0];
+// let hold = newArr[0];
 newArr.forEach((val, i) => {
-    // let hold = i !== newArr.length -1 ? newArr[i + 1] : '';
-    while (newArr.find(val => val === hold+1)) {
-        hold ++;
-        currentSequence ++;
+    let hold = i !== newArr.length - 1 ? newArr[i + 1] : '';
+    console.log("Hold", hold);
+    if (hold === val + 1) {
+        hold++;
+        currentSequence++;
+    } else {
+        maxSequence = currentSequence;
+        currentSequence = 1;
     }
-
-    // if (newArr.includes(hold + 1)) {
-    // } else {
-    //     maxSequence = currentSequence;
-    //     currentSequence = 1;
-    // }
 })
 console.log("Result", Math.max(currentSequence, maxSequence));
 
