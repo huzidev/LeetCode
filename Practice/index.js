@@ -86,19 +86,14 @@ let nums = [100, 4, 200, 1, 3, 2];
 if (!nums.length) return 0;
 nums.sort((a, b) => a - b);
 let set = new Set(nums);
+console.log("set", set);
 
 let maxSequence = 0;
 let currentSequence = 1;
-
+let max = 0;
 
 for (const i of set) {
-    if (set.has(i+1)) {
-        currentSequence++;
-    }
-    if (maxSequence < currentSequence) {
-        maxSequence = currentSequence
-        currentSequence = 1;
-    }
+    let hold = i;
 }
 
 // newArr.forEach((val, i) => {
@@ -113,7 +108,7 @@ for (const i of set) {
 //         currentSequence = 1;
 //     }
 // })
-console.log("Result", Math.max(currentSequence, maxSequence));
+// console.log("Result", Math.max(currentSequence, maxSequence));
 
 // let result = [];
 // console.log('New array', newRes);
