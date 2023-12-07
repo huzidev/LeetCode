@@ -42,10 +42,28 @@ let board = [
 //     }
 // }
 
-const set = new Set();
+let row = [];
+let column = [];
+let box = [];
 for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-        const row = board[i][j];
-        const col = board[j][i];        
+        const value = board[i][j];
+        if (value !== '.') {
+            const boxNum = 3 * Math.floor(i/3) + Math.floor(j/3);
+            row.push(value);
+            column.push(board[j][i]);
+            boxNum === j ? box.push(value) : ''
+            if (column.length !== new Set(column).size || row.length !== new Set(row).size || box.length !== new Set(box).size) {
+                        column = [];
+                        row = [];
+                        box = [];
+                        console.log("false");
+                    } else {
+                        column = [];
+                        row = [];
+                        box = [];
+                        console.log("true");
+                    }
+        }        
     }
 }
