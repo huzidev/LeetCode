@@ -93,12 +93,14 @@ let currentSequence = 1;
 // let hold = newArr[0];
 newArr.forEach((val, i) => {
     let hold = i !== newArr.length - 1 ? newArr[i + 1] : '';
-    console.log("Hold", hold);
+    console.log("seq", currentSequence);
     if (hold === val + 1) {
         hold++;
         currentSequence++;
     } else {
-        maxSequence = currentSequence;
+        if (maxSequence < currentSequence) {
+            maxSequence = currentSequence;
+        }
         currentSequence = 1;
     }
 })
