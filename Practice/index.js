@@ -84,8 +84,11 @@
 let nums = [9, 1, 4, 7, 3, -1, 0, 5, 8, -1, 6];
 nums.sort((a, b) => a - b);
 let newArr = [...new Set(nums)];
-console.log("New arr", newArr);
-// let newRes = [...newArr]
+
+let maxSequence = 0;
+newArr.forEach((val, i) => {
+
+})
 // let result = [];
 // console.log('New array', newRes);
 // let hold = newRes[0];
