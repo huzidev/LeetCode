@@ -93,7 +93,6 @@ let currentSequence = 1;
 // let hold = newArr[0];
 newArr.forEach((val, i) => {
     let hold = i !== newArr.length - 1 ? newArr[i + 1] : '';
-    console.log("seq", currentSequence);
     if (hold === val + 1) {
         hold++;
         currentSequence++;
