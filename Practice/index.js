@@ -99,8 +99,9 @@ for (const i of set) {
     } else {
         if (maxSequence < currentSequence) {
             maxSequence = currentSequence;
-            currentSequence = 1;
+            console.log("max seq", maxSequence);
         }
+        currentSequence = 1;
     }
 }
 console.log("result", Math.max(currentSequence, maxSequence));
