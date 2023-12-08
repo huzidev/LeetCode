@@ -55,6 +55,7 @@
 // }
 
 const s = "A man, a plan, a canal: Panama";
-// const result = s.split(/[,: ]/).join('').toLowerCase();
-const result = s.split().reverse().join('').toLowerCase();
-console.log("Res", result);
+// const s = " ";
+const resultRev = s.split(/[,: ]/).join('').toLowerCase();
+const result = s.split(/[,: ]/).reverse().join('').toLowerCase();
+console.log("len", result, resultRev);
