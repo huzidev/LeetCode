@@ -18,7 +18,6 @@
 // Since an empty string reads the same forward and backward, it is a palindrome.
 
 const s = "A man, a plan, a canal: Panama";
-
 // if string is empty then it's a valid palindrome hence return true
 if (s === ' ') return true;
 
@@ -26,8 +25,8 @@ if (s === ' ') return true;
 // EX: initially the string is "A man, a plan, a canal: Panama" Here we've (, :) as symbols hence after matching it'll become amanaplanacanalpanama
 let result = s.match(/[A-Za-z0-9]/g);
 
-// if their were only special characters and symbols and NOT any alpha-numeric keys hence return true
-// because after mathcing the result array will be empty string
+// if their were only special characters and symbols and NOT any alpha-numeric value hence return true
+// because after mathcing the result string will be empty string
 if (!result) return true;
 
 // to join and change into lowercase the result string
