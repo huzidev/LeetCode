@@ -54,9 +54,17 @@
 //     }
 // }
 
-const s = "A man, a plan, a canal: Panama";
-const result = s.match(/[A-Za-z0-9]/g);
-result.split('').join('').toLowerCase();
-console.log('result', result);
-// const resultRev = result.split('').reverse().join('');
-// console.log("len", result === resultRev ? 'mathces' : 'not mathces');
+const numbers = [2, 7, 11, 15];
+const target = 9;
+const result = []
+
+for (let i = 0; i < numbers.length; i++) {
+    for (let j = i + 1; j < numbers.length - 1; j++) {
+        if (numbers[i] + numbers[j] === target) {
+
+            result.push(i + 1, j + 1)
+        }
+        // console.log(`The Index from i = ${i} and index from j = ${j} sum up to Result which is ${target}`);
+    }
+}
+console.log("result", result);
