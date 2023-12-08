@@ -55,6 +55,8 @@
 // }
 
 const s = "A man, a plan, a canal: Panama";
-// const s = " ";
-const result = s.split(/[,: ]/).join('').toLowerCase();
-console.log("len", result);
+const result = s.match(/[A-Za-z0-9]/g);
+result.split('').join('').toLowerCase();
+console.log('result', result);
+// const resultRev = result.split('').reverse().join('');
+// console.log("len", result === resultRev ? 'mathces' : 'not mathces');
