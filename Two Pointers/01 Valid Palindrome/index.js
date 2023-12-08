@@ -25,3 +25,7 @@ if (s === ' ') return true;
 // to seprate only alpha-numeric characters and remove any special characters or symbols
 // EX: initially the string is "A man, a plan, a canal: Panama" Here we've (, :) as symbols hence after matching it'll become amanaplanacanalpanama
 let result = s.match(/[A-Za-z0-9]/g);
+
+// if their were only special characters and symbols and NOT any alpha-numeric keys hence return true
+// because after mathcing the result array will be empty string
+if (!result) return true;
