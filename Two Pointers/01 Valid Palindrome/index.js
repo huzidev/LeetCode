@@ -29,3 +29,11 @@ let result = s.match(/[A-Za-z0-9]/g);
 // if their were only special characters and symbols and NOT any alpha-numeric keys hence return true
 // because after mathcing the result array will be empty string
 if (!result) return true;
+
+// to join and change into lowercase the result string
+result = result.join('').toLowerCase();
+
+// to reverse the result string to match if it's same forward and backward
+const resultRev = result.split('').reverse().join('');
+
+return result === resultRev ? true : false;
