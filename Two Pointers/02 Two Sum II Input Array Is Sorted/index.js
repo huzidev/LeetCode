@@ -31,6 +31,6 @@ while(left < right) {
         result.push(numbers[left], numbers[right]);
     }
     // Already SORTED array therefore if sum > 0 means higher value from the right pointer is added therefore right--
-    // if sum < 0 means left pointer is adding smaller values therefore left--
+    // if sum < 0 means left pointer is adding smaller values therefore left++
     sum > target ? right-- : left++;
 }
