@@ -28,8 +28,8 @@ while(left < right) {
     // 1st iteration: leftMax is 0 and rightMax is 1;
     // 2nd iteration: leftMax is 1 and rightMax is still 1 (Because only left ptr incremented in 1st iteration);
     // 3rd iteration: leftMax is still 1 and rightMax is now 2 (Because only right ptr decremented in 2nd iteration);
-    leftMax = Math.max(leftMax, leftHeight);
-    rightMax = Math.max(rightMax, rightHeight);
+    leftMax = Math.max(leftHeight, leftMax);
+    rightMax = Math.max(rightHeight, rightMax);
 
     if (leftHeight < rightHeight) {
         // += is increment operator
@@ -41,9 +41,8 @@ while(left < right) {
     } else {
         // 2nd iteration: waterTrapped is still 0 because rightMax and rightHeight both were 1;
         waterTrapped += rightMax - rightHeight;
-        right--;
+        right++;
     }
 }
-
-console.log("Water trapped", waterTrapped);
-// return waterTrapped;
+    
+return waterTrapped;
